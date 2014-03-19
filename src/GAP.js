@@ -1,4 +1,3 @@
-
 var GAP = GAP || {};
 
 GAP.track = (function() {
@@ -9,7 +8,7 @@ GAP.track = (function() {
       if(typeof(ga)=="function"){
         //universal analytics ready
         _version = "universal";
-      }else{
+      }else if(!window._gaq){
         _gaq = _gaq || [];
       }
       _log("GA detected version: "+_version);
